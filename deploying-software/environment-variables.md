@@ -28,7 +28,7 @@ Basically, any structure that captures how people want to access the data will
 work. As a side benefit, when data is placed on a web server, these directory
 trees map nicely onto RESTful URLs.
 
-### File paths
+### Configurable paths
 
 In order to deploy software to machines with different setups we need to
 accommodate different file paths. So absolute paths should **never** be allowed
@@ -36,7 +36,7 @@ in scientific software. Relative paths are also suspect because they depend on
 the environt `PATH` to be set appropriately, a common source of error and
 confusion.
 
-Instead, a configureable `basePath` (`baseUrl` for web accessible data) should
+Instead, a configurable `basePath` (`baseUrl` for web accessible data) should
 be used. When combined with a _well known directory structure_, it will be
 possible to create absolute paths on any machine by simply modifying the
 `basePath`.
